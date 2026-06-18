@@ -233,7 +233,7 @@ const products = {
         colorGradient: "linear-gradient(135deg, #E0F2F1 0%, #008080 100%)",
         liquidColor: "#C4E9E7",
         accentColor: "#006666",
-        imageSrc: ""
+        imageSrc: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=600&auto=format&fit=crop"
     },
     "Vanilla Royale": {
         name: "Vanilla Royale",
@@ -257,7 +257,7 @@ const products = {
         colorGradient: "linear-gradient(135deg, #ECC89C 0%, #5C3A21 100%)",
         liquidColor: "#D3AC86",
         accentColor: "#5C3A21",
-        imageSrc: ""
+        imageSrc: "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=600&auto=format&fit=crop"
     }
 };
 
