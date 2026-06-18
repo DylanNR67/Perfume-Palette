@@ -6,6 +6,20 @@ let appState = {
     cart: JSON.parse(localStorage.getItem('perfume_palette_cart')) || [],
     reviews: [
         {
+            id: 7,
+            name: "Genevieve R.",
+            stars: 5,
+            headline: "Simply unmatched luxury and performance!",
+            text: "Santal Nectar is a stellar composition. The opening cardamom and violet leaves offer a crisp, spicy freshness that gently transitions into a buttery sandalwood dry-down. What makes this experience truly standout is the brand's direct WhatsApp ordering—super fast, responsive, and I received two premium samples of Amber Velvet and Citrus Breeze! A complete masterclass in modern perfumery.",
+            product: "Santal Nectar",
+            family: "Woody",
+            longevity: "Long-Lasting",
+            sillage: "Strong",
+            occasion: "Special Date",
+            verified: true,
+            date: "June 17, 2026"
+        },
+        {
             id: 1,
             name: "Alexander K.",
             stars: 5,
@@ -196,6 +210,54 @@ const products = {
         liquidColor: "#DBA597",
         accentColor: "#914F3D",
         imageSrc: "assets/images/amber_velvet.png"
+    },
+    "Ocean Mist": {
+        name: "Ocean Mist",
+        family: "Citrus",
+        tagline: "Crisp, Marine & Aquatic",
+        description: "A cooling sea salt breeze with fresh mineral notes, cucumber slice, and driftwood base.",
+        longDescription: "An immersive dive into the cold, deep ocean. Ocean Mist opens with a crisp breeze of sea salt and mineral accord, layered with fresh cucumber slice and green algae, before drying down to a calming driftwood and white musk foundation. Perfect for active days and bright summer mornings.",
+        price: 105,
+        sizes: {
+            "50ml Eau de Parfum": 105,
+            "100ml Eau de Parfum": 155,
+            "10ml Concentrated Oil": 38
+        },
+        notes: {
+            top: "Sea Salt, Cucumber",
+            heart: "Algae, Mineral Accord",
+            base: "Driftwood, White Musk"
+        },
+        longevity: 6.2,
+        sillage: 5.5,
+        colorGradient: "linear-gradient(135deg, #E0F2F1 0%, #008080 100%)",
+        liquidColor: "#C4E9E7",
+        accentColor: "#006666",
+        imageSrc: ""
+    },
+    "Vanilla Royale": {
+        name: "Vanilla Royale",
+        family: "Oriental",
+        tagline: "Sweet, Opulent & Seductive",
+        description: "Rich black vanilla pod, warm toasted tonka bean, and a splash of spiced gold rum.",
+        longDescription: "An indulgent, velvet night. Vanilla Royale is an opulent oriental blend opening with sweet spiced gold rum and night-blooming orchids. The heart is filled with toasted tonka bean and heliotrope, melting into a heavy, intoxicating base of Madagascar black vanilla pod, rich benzoin, and amber crystals.",
+        price: 125,
+        sizes: {
+            "50ml Eau de Parfum": 125,
+            "100ml Eau de Parfum": 190,
+            "10ml Concentrated Oil": 48
+        },
+        notes: {
+            top: "Spiced Rum, Orchid",
+            heart: "Toasted Tonka, Heliotrope",
+            base: "Madagascar Vanilla, Benzoin"
+        },
+        longevity: 8.8,
+        sillage: 8.0,
+        colorGradient: "linear-gradient(135deg, #ECC89C 0%, #5C3A21 100%)",
+        liquidColor: "#D3AC86",
+        accentColor: "#5C3A21",
+        imageSrc: ""
     }
 };
 
@@ -327,6 +389,7 @@ function renderHome() {
             <div class="category-grid">
                 <!-- Woody Card -->
                 <div class="category-card" data-family="Woody">
+                    <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?q=80&w=600&auto=format&fit=crop" alt="Woody family background" class="category-card-bg">
                     <!-- SVG Tree Icon -->
                     <svg class="category-icon" viewBox="0 0 24 24">
                         <path d="M12 2L3 9h3v10h12V9h3L12 2z"/>
@@ -337,6 +400,7 @@ function renderHome() {
                 </div>
                 <!-- Citrus Card -->
                 <div class="category-card" data-family="Citrus">
+                    <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?q=80&w=600&auto=format&fit=crop" alt="Citrus family background" class="category-card-bg">
                     <!-- SVG Lemon Icon -->
                     <svg class="category-icon" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="10"/>
@@ -348,6 +412,7 @@ function renderHome() {
                 </div>
                 <!-- Floral Card -->
                 <div class="category-card" data-family="Floral">
+                    <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?q=80&w=600&auto=format&fit=crop" alt="Floral family background" class="category-card-bg">
                     <!-- SVG Flower Icon -->
                     <svg class="category-icon" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="3"/>
@@ -358,6 +423,7 @@ function renderHome() {
                 </div>
                 <!-- Oriental Card -->
                 <div class="category-card" data-family="Oriental">
+                    <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?q=80&w=600&auto=format&fit=crop" alt="Oriental family background" class="category-card-bg">
                     <!-- SVG Incense/Spice Icon -->
                     <svg class="category-icon" viewBox="0 0 24 24">
                         <path d="M12 2c1.2 0 2 1 2 2v6c0 1.2-1 2-2 2s-2-.8-2-2V4c0-1.2.8-2 2-2z"/>
@@ -630,25 +696,50 @@ function renderProduct() {
                     <!-- Unique Scent Notes breakdown -->
                     <div class="fragrance-notes-section">
                         <h4 class="option-title" style="margin-bottom:20px; border-bottom:1px solid rgba(197,168,128,0.25); padding-bottom:8px;">Olfactory Notes Pyramid</h4>
-                        <div class="notes-grid">
-                            <div class="note-tier-card" id="note-card-top">
-                                <span class="note-tier-badge">Top Notes</span>
-                                <h5 class="note-tier-title">Opening</h5>
-                                <p class="note-tier-ingredients">${product.notes.top}</p>
-                                <p class="note-tier-desc">Immediate impression, dissipates in 15-30 minutes.</p>
+                        <div class="notes-straight-list" style="display: flex; flex-direction: column; gap: 20px;">
+                            
+                            <!-- Top Notes Row -->
+                            <div class="note-straight-row" style="display: flex; flex-direction: column; border-bottom: 1px solid rgba(197,168,128,0.15); padding-bottom: 15px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div style="text-align: left;">
+                                        <span class="gold-badge" style="font-size: 10px; padding: 3px 10px; margin-bottom: 5px;">Top Notes</span>
+                                        <div style="font-family:'Playfair Display', serif; font-size:18px; font-weight: 500; color:var(--text-charcoal);">${product.notes.top}</div>
+                                    </div>
+                                    <button class="btn-quiz-nav btn-quiz-back note-desc-toggle-btn" data-target="desc-top" style="padding: 8px 16px; font-size: 11px; margin-left: 15px;">Note Profile</button>
+                                </div>
+                                <div id="desc-top" class="note-expandable-desc" style="max-height: 0px; overflow: hidden; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); color: var(--text-muted); font-size: 13px; text-align: left; margin-top: 0;">
+                                    <p style="padding-top: 10px;"><strong>Opening Note Description:</strong> The top notes represent the initial burst of fragrance upon application. They consist of light, evaporating molecules that form your immediate impression, fading gracefully over 15 to 30 minutes to make way for the heart of the scent.</p>
+                                </div>
                             </div>
-                            <div class="note-tier-card" id="note-card-heart">
-                                <span class="note-tier-badge" style="background-color:var(--text-charcoal); color:var(--bg-alabaster);">Heart Notes</span>
-                                <h5 class="note-tier-title">Heart</h5>
-                                <p class="note-tier-ingredients">${product.notes.heart}</p>
-                                <p class="note-tier-desc">Core of the scent, reveals itself after 20 minutes.</p>
+
+                            <!-- Heart Notes Row -->
+                            <div class="note-straight-row" style="display: flex; flex-direction: column; border-bottom: 1px solid rgba(197,168,128,0.15); padding-bottom: 15px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div style="text-align: left;">
+                                        <span class="gold-badge" style="font-size: 10px; padding: 3px 10px; margin-bottom: 5px; background-color: var(--text-charcoal); color: var(--bg-alabaster);">Heart Notes</span>
+                                        <div style="font-family:'Playfair Display', serif; font-size:18px; font-weight: 500; color:var(--text-charcoal);">${product.notes.heart}</div>
+                                    </div>
+                                    <button class="btn-quiz-nav btn-quiz-back note-desc-toggle-btn" data-target="desc-heart" style="padding: 8px 16px; font-size: 11px; margin-left: 15px;">Note Profile</button>
+                                </div>
+                                <div id="desc-heart" class="note-expandable-desc" style="max-height: 0px; overflow: hidden; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); color: var(--text-muted); font-size: 13px; text-align: left; margin-top: 0;">
+                                    <p style="padding-top: 10px;"><strong>Heart Note Description:</strong> Often called the 'middle notes', the heart represents the true character of the fragrance. Revealing itself after the top notes disperse (around 20-30 minutes), it creates the core theme of the scent and lingers for up to 4 hours.</p>
+                                </div>
                             </div>
-                            <div class="note-tier-card" id="note-card-base">
-                                <span class="note-tier-badge">Base Notes</span>
-                                <h5 class="note-tier-title">Dry Down</h5>
-                                <p class="note-tier-ingredients">${product.notes.base}</p>
-                                <p class="note-tier-desc">Deep lasting foundation, lingers for 8+ hours.</p>
+
+                            <!-- Base Notes Row -->
+                            <div class="note-straight-row" style="display: flex; flex-direction: column; padding-bottom: 5px;">
+                                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                    <div style="text-align: left;">
+                                        <span class="gold-badge" style="font-size: 10px; padding: 3px 10px; margin-bottom: 5px;">Base Notes</span>
+                                        <div style="font-family:'Playfair Display', serif; font-size:18px; font-weight: 500; color:var(--text-charcoal);">${product.notes.base}</div>
+                                    </div>
+                                    <button class="btn-quiz-nav btn-quiz-back note-desc-toggle-btn" data-target="desc-base" style="padding: 8px 16px; font-size: 11px; margin-left: 15px;">Note Profile</button>
+                                </div>
+                                <div id="desc-base" class="note-expandable-desc" style="max-height: 0px; overflow: hidden; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); color: var(--text-muted); font-size: 13px; text-align: left; margin-top: 0;">
+                                    <p style="padding-top: 10px;"><strong>Dry Down Note Description:</strong> The base notes contain the heaviest, slowest-evaporating molecules. Providing the dry-down signature, they bind the lighter ingredients, giving depth, structure, and massive longevity, remaining detectable on skin or clothes for 8 to 24+ hours.</p>
+                                </div>
                             </div>
+
                         </div>
                     </div>
 
@@ -794,6 +885,37 @@ function renderProduct() {
         btn.style.color = '#e07a5f';
         btn.style.borderColor = '#e07a5f';
         showToast("Added to your wishlist", "❤️");
+    });
+
+    // Notes description toggler
+    document.querySelectorAll('.note-desc-toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetId = btn.getAttribute('data-target');
+            const descEl = document.getElementById(targetId);
+            
+            if (descEl) {
+                const isOpen = descEl.style.maxHeight !== '0px' && descEl.style.maxHeight !== '';
+                
+                // Close all others first
+                document.querySelectorAll('.note-expandable-desc').forEach(el => {
+                    el.style.maxHeight = '0px';
+                    el.style.marginTop = '0px';
+                });
+                document.querySelectorAll('.note-desc-toggle-btn').forEach(b => {
+                    b.textContent = 'Note Profile';
+                    b.style.backgroundColor = 'transparent';
+                    b.style.color = 'var(--text-muted)';
+                });
+
+                if (!isOpen) {
+                    descEl.style.maxHeight = '150px'; // ample height
+                    descEl.style.marginTop = '10px';
+                    btn.textContent = 'Hide Profile';
+                    btn.style.backgroundColor = 'var(--text-charcoal)';
+                    btn.style.color = 'var(--bg-alabaster)';
+                }
+            }
+        });
     });
 }
 
