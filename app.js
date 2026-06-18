@@ -772,25 +772,9 @@ function renderProduct() {
             <div class="product-detail-grid">
                 <!-- Gallery Columns -->
                 <div class="product-detail-gallery">
-                    <div class="gallery-main-img-wrap">
+                    <div class="gallery-main-img-wrap" style="height: 380px; display: flex; justify-content: center; align-items: center;">
                         <div class="gallery-main-img" style="width: 280px; height: 320px; display: flex; justify-content: center; align-items: center;">
                             ${getProductImageHtml(product.name, "height: 280px;")}
-                        </div>
-                    </div>
-                    <div class="gallery-thumbs">
-                        <div class="thumb-card active" data-img="main">
-                            <div style="width: 45px; height: 55px; display: flex; justify-content: center; align-items: center;">
-                                ${getProductImageHtml(product.name, "height: 45px;")}
-                            </div>
-                        </div>
-                        <div class="thumb-card" data-img="top">
-                            <div class="serif-font" style="font-size: 11px; text-transform: uppercase; color: var(--accent-gold-hover); font-weight: bold;">Top Notes</div>
-                        </div>
-                        <div class="thumb-card" data-img="heart">
-                            <div class="serif-font" style="font-size: 11px; text-transform: uppercase; color: var(--accent-gold-hover); font-weight: bold;">Heart Notes</div>
-                        </div>
-                        <div class="thumb-card" data-img="base">
-                            <div class="serif-font" style="font-size: 11px; text-transform: uppercase; color: var(--accent-gold-hover); font-weight: bold;">Base Notes</div>
                         </div>
                     </div>
                 </div>
@@ -959,43 +943,6 @@ function renderProduct() {
             sillHandle.style.left = `${sillPercent}%`;
         }
     }, 150);
-
-    // Gallery tab swaps
-    const galleryMain = document.querySelector('.gallery-main-img');
-    const thumbCards = document.querySelectorAll('.thumb-card');
-    
-    thumbCards.forEach(card => {
-        card.addEventListener('click', () => {
-            thumbCards.forEach(c => c.classList.remove('active'));
-            card.classList.add('active');
-            
-            const type = card.getAttribute('data-img');
-            if (type === 'main') {
-                galleryMain.innerHTML = getProductImageHtml(product.name, "height: 280px;");
-            } else if (type === 'top') {
-                galleryMain.innerHTML = `
-                    <div style="text-align:center; padding:20px; color:var(--text-charcoal); animation: fadeIn 0.4s ease-out;">
-                        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" style="width:60px; height:60px; stroke-width:1; color:var(--accent-gold); margin-bottom:15px;"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
-                        <h4 class="serif-font" style="font-size:24px; margin-bottom:10px;">Top Notes</h4>
-                        <p style="font-size:14px; max-width:250px; line-height:1.5; color:var(--text-muted);">${product.notes.top}</p>
-                    </div>`;
-            } else if (type === 'heart') {
-                galleryMain.innerHTML = `
-                    <div style="text-align:center; padding:20px; color:var(--text-charcoal); animation: fadeIn 0.4s ease-out;">
-                        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" style="width:60px; height:60px; stroke-width:1; color:var(--accent-gold); margin-bottom:15px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                        <h4 class="serif-font" style="font-size:24px; margin-bottom:10px;">Heart Notes</h4>
-                        <p style="font-size:14px; max-width:250px; line-height:1.5; color:var(--text-muted);">${product.notes.heart}</p>
-                    </div>`;
-            } else if (type === 'base') {
-                galleryMain.innerHTML = `
-                    <div style="text-align:center; padding:20px; color:var(--text-charcoal); animation: fadeIn 0.4s ease-out;">
-                        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" style="width:60px; height:60px; stroke-width:1; color:var(--accent-gold); margin-bottom:15px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                        <h4 class="serif-font" style="font-size:24px; margin-bottom:10px;">Base Notes</h4>
-                        <p style="font-size:14px; max-width:250px; line-height:1.5; color:var(--text-muted);">${product.notes.base}</p>
-                    </div>`;
-            }
-        });
-    });
 
     // Size Selection toggler
     const sizeBtns = document.querySelectorAll('.size-pill-btn');
