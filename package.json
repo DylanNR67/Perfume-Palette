@@ -1,0 +1,11 @@
+{
+  "name": "perfume-palette",
+  "version": "1.0.0",
+  "description": "Premium e-commerce website for Perfume Palette",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 8080"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
