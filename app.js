@@ -258,6 +258,150 @@ const products = {
         liquidColor: "#D3AC86",
         accentColor: "#5C3A21",
         imageSrc: "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=600&auto=format&fit=crop"
+    },
+    "Vetiver Rain": {
+        name: "Vetiver Rain",
+        family: "Woody",
+        tagline: "Earth, Rain & Vetiver",
+        description: "Green vetiver grass, petrichor mineral notes, and damp cedarwood.",
+        longDescription: "The essence of a forest floor after heavy rainfall. Vetiver Rain is a clean green masterpiece blending premium Haitian vetiver grass, rain-drenched petrichor accords, and patchouli leaves, finished with a heavy base of damp cedarwood and dark oakmoss.",
+        price: 115,
+        sizes: {
+            "50ml Eau de Parfum": 115,
+            "100ml Eau de Parfum": 175,
+            "10ml Concentrated Oil": 42
+        },
+        notes: {
+            top: "Petrichor, Bergamot",
+            heart: "Green Vetiver, Cedar Leaves",
+            base: "Oakmoss, Patchouli, Sandalwood"
+        },
+        longevity: 7.5,
+        sillage: 6.8,
+        colorGradient: "linear-gradient(135deg, #A1A893 0%, #4D583F 100%)",
+        liquidColor: "#B6C0AB",
+        accentColor: "#4D583F",
+        imageSrc: "https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=600&auto=format&fit=crop"
+    },
+    "Jasmine Blossom": {
+        name: "Jasmine Blossom",
+        family: "Floral",
+        tagline: "White Florals & Velvet Musks",
+        description: "Night-blooming Jasmine Sambac, fresh orange blossom, and sheer cashmere musk.",
+        longDescription: "A delicate yet hypnotic white floral veil. Jasmine Blossom opens with sparkling neroli and sweet orange blossom buds, leading into an opulent heart of night-blooming Egyptian Jasmine Sambac, settling on a pillow of sheer cashmere musk and light amberwood.",
+        price: 108,
+        sizes: {
+            "50ml Eau de Parfum": 108,
+            "100ml Eau de Parfum": 160,
+            "10ml Concentrated Oil": 38
+        },
+        notes: {
+            top: "Neroli, Petitgrain",
+            heart: "Jasmine Sambac, Tuberose",
+            base: "Cashmere Musk, White Amber"
+        },
+        longevity: 7.0,
+        sillage: 7.2,
+        colorGradient: "linear-gradient(135deg, #F9F5EE 0%, #DED2BC 100%)",
+        liquidColor: "#ECE5D8",
+        accentColor: "#8D7C66",
+        imageSrc: "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?q=80&w=600&auto=format&fit=crop"
+    },
+    "Oud Imperial": {
+        name: "Oud Imperial",
+        family: "Woody",
+        tagline: "Rich Oud & Dark Rose",
+        description: "Rare Cambodian oud wood, Turkish damask rose, and leather spice.",
+        longDescription: "Mysterious, heavy, and majestic. Oud Imperial blends dark Cambodian oud wood with Turkish damask rose petals, spiced with black pepper and cardamom, over a deep base of soft suede, agarwood, and labdanum.",
+        price: 165,
+        sizes: {
+            "50ml Eau de Parfum": 165,
+            "100ml Eau de Parfum": 245,
+            "10ml Concentrated Oil": 60
+        },
+        notes: {
+            top: "Cardamom, Black Pepper",
+            heart: "Damask Rose, Suede Accord",
+            base: "Cambodian Oud, Agarwood, Amber"
+        },
+        longevity: 9.6,
+        sillage: 9.2,
+        colorGradient: "linear-gradient(135deg, #4A3B32 0%, #1A1310 100%)",
+        liquidColor: "#9A7E6C",
+        accentColor: "#2F1E16",
+        imageSrc: "https://images.unsplash.com/photo-1588405748373-122b25c86df5?q=80&w=600&auto=format&fit=crop"
+    },
+    "Matcha Zen": {
+        name: "Matcha Zen",
+        family: "Citrus",
+        tagline: "Ceremonial Matcha & Bergamot",
+        description: "Creamy ceremonial green tea matcha, bright bergamot zest, and soft cedar.",
+        longDescription: "A serene, calming olfactory retreat. Matcha Zen opens with bright citrus bergamot and mandarin orange, warming into a rich heart of creamy green matcha tea and powder accord, and settling on a peaceful bed of cedarwood and white musk.",
+        price: 110,
+        sizes: {
+            "50ml Eau de Parfum": 110,
+            "100ml Eau de Parfum": 165,
+            "10ml Concentrated Oil": 40
+        },
+        notes: {
+            top: "Bergamot, Mandarin",
+            heart: "Green Matcha Tea, Powder Accord",
+            base: "Cedarwood, White Musk"
+        },
+        longevity: 6.5,
+        sillage: 6.0,
+        colorGradient: "linear-gradient(135deg, #DFE6DB 0%, #BCCBB3 100%)",
+        liquidColor: "#D0DCD0",
+        accentColor: "#556B2F",
+        imageSrc: "https://images.unsplash.com/photo-1594035910387-fea47794261f?q=80&w=600&auto=format&fit=crop"
+    },
+    "Spiced Tobacco": {
+        name: "Spiced Tobacco",
+        family: "Oriental",
+        tagline: "Warm Spices & Sweet Tobacco",
+        description: "Dried tobacco leaves, sweet vanilla bean, cocoa, and warm spices.",
+        longDescription: "A warm, comforting, and opulent lounge atmosphere. Spiced Tobacco opens with rich dried tobacco leaves and warm cardamom spice, melting into a heart of sweet vanilla pod, dark cocoa, and tonka bean, over a woody dried fruit base.",
+        price: 130,
+        sizes: {
+            "50ml Eau de Parfum": 130,
+            "100ml Eau de Parfum": 195,
+            "10ml Concentrated Oil": 48
+        },
+        notes: {
+            top: "Tobacco Leaves, Spices",
+            heart: "Vanilla, Cocoa, Tonka Bean",
+            base: "Woody Accord, Dried Fruits"
+        },
+        longevity: 9.0,
+        sillage: 8.5,
+        colorGradient: "linear-gradient(135deg, #DEB887 0%, #8B4513 100%)",
+        liquidColor: "#CFA076",
+        accentColor: "#5B2A0A",
+        imageSrc: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=600&auto=format&fit=crop"
+    },
+    "Coconut Blossom": {
+        name: "Coconut Blossom",
+        family: "Floral",
+        tagline: "Creamy Coconut & White Frangipani",
+        description: "Golden tiare blossom, creamy coconut milk, and solar beach sands.",
+        longDescription: "An endless golden summer in a bottle. Coconut Blossom opens with sweet tiare flower and frangipani petals, layered with rich coconut milk and warm vanilla orchid, resting on a base of solar sands and sheer musk.",
+        price: 98,
+        sizes: {
+            "50ml Eau de Parfum": 98,
+            "100ml Eau de Parfum": 145,
+            "10ml Concentrated Oil": 35
+        },
+        notes: {
+            top: "Tiare Flower, Frangipani",
+            heart: "Coconut Milk, Vanilla Orchid",
+            base: "Solar Sand, Musk"
+        },
+        longevity: 6.8,
+        sillage: 7.0,
+        colorGradient: "linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%)",
+        liquidColor: "#FFF2D1",
+        accentColor: "#D2B48C",
+        imageSrc: "https://images.unsplash.com/photo-1616949755610-8c9bbc08f138?q=80&w=600&auto=format&fit=crop"
     }
 };
 
