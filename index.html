@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfume Palette | Find Your Perfect Scent Profile</title>
+    <title>Perfume Palette | Authorized Luxury & Niche Fragrance Reseller</title>
     <!-- Favicon placeholder/icon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
     <!-- Google Meta SEO tags -->
-    <meta name="description" content="Explore luxury fragrances at Perfume Palette. Find your custom scent profile with our interactive scent quiz, browse Woody, Citrus, Floral, and Oriental best sellers, and read organic reviews.">
+    <meta name="description" content="Perfume Palette is your authorized reseller of popular luxury, designer, and niche fragrance brands. Shop Dior, Chanel, Tom Ford, Creed, and Byredo with 100% authenticity guaranteed.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,7 +19,7 @@
     <header class="header" id="main-header">
         <div class="container nav-container">
             <!-- Brand Logo -->
-            <a href="#" class="logo" id="logo-link">
+            <a href="#hero" class="logo" id="logo-link">
                 <!-- Inline SVG Logo Icon -->
                 <svg class="logo-icon" viewBox="0 0 24 24">
                     <path d="M12 2v20M17 5H7a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3z"/>
@@ -32,9 +32,10 @@
             <!-- Navigation Links -->
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#" class="nav-tab active" data-page="home" id="nav-home">Home</a></li>
-                    <li><a href="#" class="nav-tab" data-page="product" id="nav-product">Signature Scent</a></li>
-                    <li><a href="#" class="nav-tab" data-page="reviews" id="nav-reviews">Scent Voices</a></li>
+                    <li><a href="#top-picks" class="nav-tab" id="nav-top-picks">Top Picks</a></li>
+                    <li><a href="#all-brands" class="nav-tab" id="nav-all-brands">All Brands</a></li>
+                    <li><a href="#scent-voices" class="nav-tab" id="nav-reviews">Scent Voices</a></li>
+                    <li><a href="#about-us" class="nav-tab" id="nav-about-us">About Us</a></li>
                 </ul>
             </nav>
 
@@ -45,12 +46,6 @@
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                 </a>
-                <button class="nav-btn" id="btn-search-nav" aria-label="Search">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                </button>
                 <button class="nav-btn" id="btn-cart-nav" aria-label="Open Cart">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="9" cy="21" r="1"></circle>
@@ -63,9 +58,173 @@
         </div>
     </header>
 
-    <!-- --- MAIN CONTENT INTERACTIVE PORT --- -->
-    <main id="app-content">
-        <!-- SPA View injections occur here -->
+    <!-- --- MAIN ONE PAGE CONTENT --- -->
+    <main>
+        
+        <!-- 1. UNIFIED SUPER-HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-grid">
+                <!-- Column A: Value Proposition -->
+                <div class="hero-content">
+                    <div class="trust-badge-shield">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="shield-icon">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <span>Verified Authorized Reseller | 🔒 Safe Checkout</span>
+                    </div>
+                    <h1 class="hero-title">Your Authentic<br>Fragrance Wardrobe.<br><span>Curated for You</span>.</h1>
+                    <p class="hero-description">Discover 100% genuine designer & niche scents sourced directly from authorized distributors. Enjoy premium decants and full bottles with complimentary shipping on orders over Rp 1.000.000.</p>
+                    <div class="hero-actions">
+                        <a href="#top-picks" class="btn-primary">Explore Top Picks</a>
+                        <a href="#about-us" class="btn-secondary">Authenticity Guarantee</a>
+                    </div>
+                </div>
+                <!-- Column B: Immediate Shopping Access (Top 6 Trending Carousel/Grid) -->
+                <div class="hero-access-sidebar">
+                    <div class="sidebar-header">
+                        <span class="gold-badge">Trending Now</span>
+                        <h3>Bestsellers Shop</h3>
+                    </div>
+                    <div class="bestsellers-compact-grid" id="hero-bestsellers-grid">
+                        <!-- Dynamically populated from app.js (top 6 trending items) -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. TOP PICKS SECTION -->
+        <section id="top-picks" class="section-padding top-picks-section">
+            <div class="container">
+                <div class="section-title-wrap text-center">
+                    <span class="section-subtitle">Exclusive Reseller Collection</span>
+                    <h2 class="section-title">Your Signature Scent. Explore Our Top 15.</h2>
+                    <p class="section-desc">Hand-selected best sellers from Chanel, Dior, Creed, Tom Ford, and Byredo. Visually compare and add your favorites directly to your cart.</p>
+                </div>
+                
+                <!-- sleek visual grid of 15 items -->
+                <div class="top-picks-grid" id="top-picks-grid">
+                    <!-- Dynamically populated from app.js (15 fragrances) -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. ALL BRANDS SECTION -->
+        <section id="all-brands" class="section-padding brands-section">
+            <div class="container">
+                <div class="section-title-wrap text-center">
+                    <span class="section-subtitle">Authorized Portfolios</span>
+                    <h2 class="section-title">Curated Brands Directory</h2>
+                </div>
+                <div class="brands-logo-grid">
+                    <div class="brand-logo-card">
+                        <span class="brand-logo-initial">C</span>
+                        <h4>Chanel</h4>
+                        <p>Parisian Elegance</p>
+                    </div>
+                    <div class="brand-logo-card">
+                        <span class="brand-logo-initial">D</span>
+                        <h4>Dior</h4>
+                        <p>Haute Couture Scents</p>
+                    </div>
+                    <div class="brand-logo-card">
+                        <span class="brand-logo-initial">T</span>
+                        <h4>Tom Ford</h4>
+                        <p>Sensual Boldness</p>
+                    </div>
+                    <div class="brand-logo-card">
+                        <span class="brand-logo-initial">C</span>
+                        <h4>Creed</h4>
+                        <p>Royal Heritage House</p>
+                    </div>
+                    <div class="brand-logo-card">
+                        <span class="brand-logo-initial">B</span>
+                        <h4>Byredo</h4>
+                        <p>Modern Artistry</p>
+                    </div>
+                    <div class="brand-logo-card">
+                        <span class="brand-logo-initial">M</span>
+                        <h4>MFK</h4>
+                        <p>Maison Francis Kurkdjian</p>
+                    </div>
+                    <div class="brand-logo-card">
+                        <span class="brand-logo-initial">Y</span>
+                        <h4>YSL</h4>
+                        <p>Bold Parisian Spirit</p>
+                    </div>
+                    <div class="brand-logo-card">
+                        <span class="brand-logo-initial">L</span>
+                        <h4>Le Labo</h4>
+                        <p>Wabi-Sabi Minimalism</p>
+                    </div>
+                    <div class="brand-logo-card">
+                        <span class="brand-logo-initial">J</span>
+                        <h4>Jo Malone</h4>
+                        <p>British Scent Layering</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SCENT VOICES SECTION -->
+        <section id="scent-voices" class="section-padding reviews-section">
+            <div class="container">
+                <div class="reviews-header-layout">
+                    <div class="reviews-headline-wrap">
+                        <span class="section-subtitle">Customer Trust</span>
+                        <h2 class="section-title">The Scent Community. Authentic Experiences.</h2>
+                    </div>
+                    <!-- Prominent overall rating panel -->
+                    <div class="reviews-overall-rating">
+                        <span class="overall-rating-number">4.7</span>
+                        <div class="rating-stars-wrap">
+                            <span class="rating-stars-gold">⭐⭐⭐⭐⭐</span>
+                            <span class="verified-buyers-count">1,400+ Verified Buyers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dense scrolling feed of comments -->
+                <div class="reviews-dense-container">
+                    <div class="reviews-dense-feed" id="reviews-dense-feed">
+                        <!-- Dynamically populated from app.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ABOUT US SECTION -->
+        <section id="about-us" class="section-padding about-section">
+            <div class="container about-grid">
+                <div class="about-text-content">
+                    <span class="section-subtitle">Reseller Guarantee</span>
+                    <h2 class="section-title">Our Authenticity Promise</h2>
+                    <p class="about-paragraph">Perfume Palette operates strictly as an authorized secondary distributor of original fragrance houses. Every batch we procure is accompanied by formal origin audits, batch verification tags, and pristine shelf-life controls. We source in bulk from duty-free hubs and registered boutiques to pass wholesale savings directly onto fragrance collectors in Indonesia.</p>
+                    <div class="about-points">
+                        <div class="about-point-item">
+                            <div class="point-icon-wrap">🛡️</div>
+                            <div>
+                                <h5>100% Original Scent Profile</h5>
+                                <p>No reformulations, replicas, or testers. Scent profiles match original counters exactly.</p>
+                            </div>
+                        </div>
+                        <div class="about-point-item">
+                            <div class="point-icon-wrap">🚚</div>
+                            <div>
+                                <h5>Secure Air Cargo Transit</h5>
+                                <p>All items stored under temperature-controlled logistics to prevent raw note degradation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image-collage">
+                    <div class="collage-main-frame">
+                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?q=80&w=800&auto=format&fit=crop" alt="Luxury fragrance setup" class="collage-img-1">
+                        <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?q=80&w=800&auto=format&fit=crop" alt="Glass bottle details" class="collage-img-2">
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- --- FOOTER --- -->
@@ -74,7 +233,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <h4>Perfume Palette</h4>
-                    <p>Bridging the gap between timeless luxury and accessible modern scent profiles.</p>
+                    <p>Authorized Luxury & Niche Fragrances. Curating timeless scent portfolios for the modern collector.</p>
                     <div class="social-links">
                         <a href="https://github.com/DylanNR67/Perfume-Palette.git" target="_blank" class="social-btn" aria-label="GitHub">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
@@ -85,42 +244,37 @@
                         <a href="#" class="social-btn" aria-label="Facebook">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                         </a>
-                        <a href="#" class="social-btn" aria-label="Twitter">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                        </a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h5>Fragrance Families</h5>
+                    <h5>Reseller Catalog</h5>
                     <ul class="footer-links">
-                        <li><a href="#" class="footer-family-link" data-family="Woody">Woody</a></li>
-                        <li><a href="#" class="footer-family-link" data-family="Citrus">Citrus</a></li>
-                        <li><a href="#" class="footer-family-link" data-family="Floral">Floral</a></li>
-                        <li><a href="#" class="footer-family-link" data-family="Oriental">Oriental</a></li>
+                        <li><a href="#top-picks">Dior Sauvage</a></li>
+                        <li><a href="#top-picks">Chanel No. 5</a></li>
+                        <li><a href="#top-picks">Creed Aventus</a></li>
+                        <li><a href="#top-picks">Baccarat Rouge</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h5>The Brand</h5>
                     <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Scent Quiz Details</a></li>
-                        <li><a href="#">Sustainability</a></li>
-                        <li><a href="#">Our Perfumers</a></li>
+                        <li><a href="#about-us">About Us</a></li>
+                        <li><a href="#about-us">Authenticity Promise</a></li>
+                        <li><a href="#scent-voices">Scent Voices</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h5>Support</h5>
                     <ul class="footer-links">
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Shipping & Returns</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Store Locator</a></li>
+                        <li><a href="https://wa.link/x68he8" target="_blank">Order Inquiries</a></li>
+                        <li><a href="#about-us">Shipping Policies</a></li>
+                        <li><a href="#about-us">FAQ</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Perfume Palette. All rights reserved.</p>
-                <p>Designed for Luxury & Accessibility.</p>
+                <p>&copy; 2026 Perfume Palette. All rights reserved. Sourced & Curated in Indonesia.</p>
+                <p>Designed for Ultimate Luxury & Seamless Navigation.</p>
             </div>
         </div>
     </footer>
@@ -129,7 +283,7 @@
     <div class="cart-drawer-overlay" id="cart-overlay"></div>
     <div class="cart-drawer" id="cart-drawer" role="dialog" aria-labelledby="cart-title">
         <div class="cart-header">
-            <h3 id="cart-title">Your Palette</h3>
+            <h3 id="cart-title">Your Wardrobe</h3>
             <button class="btn-close-drawer" id="btn-close-cart" aria-label="Close Cart">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -151,227 +305,6 @@
                 Checkout via WhatsApp
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </button>
-        </div>
-    </div>
-
-    <!-- --- INTERACTIVE SCENT QUIZ MODAL --- -->
-    <div class="modal-overlay" id="quiz-overlay">
-        <div class="quiz-modal-card" role="dialog" aria-modal="true" aria-labelledby="quiz-title">
-            <div class="quiz-header">
-                <h3 id="quiz-title">Scent Profile Finder</h3>
-                <div class="quiz-progress-track">
-                    <div class="quiz-progress-bar" id="quiz-progress-indicator"></div>
-                </div>
-                <button class="btn-close-drawer" id="btn-close-quiz" aria-label="Close Quiz">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-            
-            <div class="quiz-body" id="quiz-body-content">
-                <!-- Step 1: Mood/Preference -->
-                <div class="quiz-step active" data-step="1">
-                    <h4 class="quiz-question">Which fragrance profile appeals to you most?</h4>
-                    <div class="quiz-options-list">
-                        <button class="quiz-option-btn" data-answer="Woody">
-                            <span class="option-dot"></span>
-                            <span class="option-label-text">Earthy, Warm & Grounding</span>
-                        </button>
-                        <button class="quiz-option-btn" data-answer="Citrus">
-                            <span class="option-dot"></span>
-                            <span class="option-label-text">Zesty, Fresh & Energizing</span>
-                        </button>
-                        <button class="quiz-option-btn" data-answer="Floral">
-                            <span class="option-dot"></span>
-                            <span class="option-label-text">Sweet, Elegant & Romantic</span>
-                        </button>
-                        <button class="quiz-option-btn" data-answer="Oriental">
-                            <span class="option-dot"></span>
-                            <span class="option-label-text">Spicy, Rich & Exotic</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Step 2: Occasion -->
-                <div class="quiz-step" data-step="2">
-                    <h4 class="quiz-question">Where do you plan to wear this scent?</h4>
-                    <div class="quiz-options-list">
-                        <button class="quiz-option-btn" data-answer="Daily">
-                            <span class="option-dot"></span>
-                            <span class="option-label-text">Everyday Office & Casual Wear</span>
-                        </button>
-                        <button class="quiz-option-btn" data-answer="Night">
-                            <span class="option-dot"></span>
-                            <span class="option-label-text">Intimate Dates & Evenings Out</span>
-                        </button>
-                        <button class="quiz-option-btn" data-answer="Special">
-                            <span class="option-dot"></span>
-                            <span class="option-label-text">Grand Galas & Celebrations</span>
-                        </button>
-                        <button class="quiz-option-btn" data-answer="Active">
-                            <span class="option-dot"></span>
-                            <span class="option-label-text">Post-Workout & Active Mornings</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Step 3: Intensity/Sillage -->
-                <div class="quiz-step" data-step="3">
-                    <h4 class="quiz-question">How prominent do you want your scent trail to be?</h4>
-                    <div class="quiz-options-list">
-                        <button class="quiz-option-btn" data-answer="Intimate">
-                            <span class="option-dot"></span>
-                            <span class="option-label-text">Intimate (Only noticed close up)</span>
-                        </button>
-                        <button class="quiz-option-btn" data-answer="Moderate">
-                            <span class="option-dot"></span>
-                            <span class="option-label-text">Moderate (Leaves a subtle breeze)</span>
-                        </button>
-                        <button class="quiz-option-btn" data-answer="Strong">
-                            <span class="option-dot"></span>
-                            <span class="option-label-text">Strong (Leaves a lasting impression)</span>
-                        </button>
-                        <button class="quiz-option-btn" data-answer="Oil">
-                            <span class="option-dot"></span>
-                            <span class="option-label-text">Perfume Oil (Skin scent, lingers long)</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Step 4: Results (Dynamically filled) -->
-                <div class="quiz-step" data-step="4" id="quiz-results-step">
-                    <div class="quiz-result-container">
-                        <div class="quiz-result-bottle" id="quiz-result-image-holder">
-                            <!-- SVG Bottle dynamically injected -->
-                        </div>
-                        <p class="gold-badge" style="margin-bottom: 12px;">Your Perfect Match</p>
-                        <h4 class="quiz-result-perfume-name" id="quiz-result-name">Santal Nectar</h4>
-                        <p class="quiz-result-desc" id="quiz-result-description">A rich fusion of warm Australian sandalwood, amberwood, and a touch of vanilla bean.</p>
-                        <button class="btn-primary" id="btn-quiz-view-product" style="padding:12px 30px; font-size:13px;">View Fragrance</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="quiz-footer" id="quiz-modal-footer">
-                <button class="btn-quiz-nav btn-quiz-back" id="btn-quiz-back" style="visibility: hidden;">Back</button>
-                <button class="btn-quiz-nav btn-quiz-next" id="btn-quiz-next">Next</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- --- WRITE A REVIEW MODAL --- -->
-    <div class="modal-overlay" id="review-overlay">
-        <div class="quiz-modal-card" style="width: 500px;" role="dialog" aria-modal="true" aria-labelledby="review-modal-title">
-            <div class="quiz-header">
-                <h3 id="review-modal-title">Share Your Scent Voice</h3>
-                <button class="btn-close-drawer" id="btn-close-review-modal" aria-label="Close Review Form">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-            
-            <div class="quiz-body">
-                <form class="review-form" id="write-review-form">
-                    <div class="form-group">
-                        <label class="form-label">Overall Rating</label>
-                        <div class="star-rating-select-wrap" id="review-star-selector">
-                            <button type="button" class="star-select-btn active" data-rating="1" aria-label="1 star">
-                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                            </button>
-                            <button type="button" class="star-select-btn active" data-rating="2" aria-label="2 stars">
-                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                            </button>
-                            <button type="button" class="star-select-btn active" data-rating="3" aria-label="3 stars">
-                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                            </button>
-                            <button type="button" class="star-select-btn active" data-rating="4" aria-label="4 stars">
-                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                            </button>
-                            <button type="button" class="star-select-btn active" data-rating="5" aria-label="5 stars">
-                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="form-row-grid">
-                        <div class="form-group">
-                            <label class="form-label" for="review-input-name">Your Name</label>
-                            <input type="text" id="review-input-name" class="form-input" required placeholder="e.g. Eleanor P.">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="review-select-fragrance">Select Fragrance</label>
-                            <select id="review-select-fragrance" class="form-select" required>
-                                <option value="Santal Nectar">Santal Nectar (Woody)</option>
-                                <option value="Citrus Breeze">Citrus Breeze (Citrus)</option>
-                                <option value="Rose Couture">Rose Couture (Floral)</option>
-                                <option value="Amber Velvet">Amber Velvet (Oriental)</option>
-                                <option value="Ocean Mist">Ocean Mist (Citrus)</option>
-                                <option value="Vanilla Royale">Vanilla Royale (Oriental)</option>
-                                <option value="Vetiver Rain">Vetiver Rain (Woody)</option>
-                                <option value="Jasmine Blossom">Jasmine Blossom (Floral)</option>
-                                <option value="Oud Imperial">Oud Imperial (Woody)</option>
-                                <option value="Matcha Zen">Matcha Zen (Citrus)</option>
-                                <option value="Spiced Tobacco">Spiced Tobacco (Oriental)</option>
-                                <option value="Coconut Blossom">Coconut Blossom (Floral)</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label" for="review-input-headline">Review Headline</label>
-                        <input type="text" id="review-input-headline" class="form-input" required placeholder="Summarize your experience">
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label" for="review-input-text">Detailed Review</label>
-                        <textarea id="review-input-text" class="form-textarea" rows="4" required placeholder="Describe the opening notes, performance, and how it makes you feel..."></textarea>
-                    </div>
-
-                    <div class="form-row-grid">
-                        <div class="form-group">
-                            <label class="form-label" for="review-select-longevity">Longevity</label>
-                            <select id="review-select-longevity" class="form-select" required>
-                                <option value="Weak">Weak</option>
-                                <option value="Moderate" selected>Moderate</option>
-                                <option value="Long-Lasting">Long-Lasting</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="review-select-sillage">Sillage</label>
-                            <select id="review-select-sillage" class="form-select" required>
-                                <option value="Intimate">Intimate</option>
-                                <option value="Moderate" selected>Moderate</option>
-                                <option value="Strong">Strong</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-row-grid">
-                        <div class="form-group">
-                            <label class="form-label" for="review-select-occasion">Occasion</label>
-                            <select id="review-select-occasion" class="form-select" required>
-                                <option value="Daily">Daily Wear</option>
-                                <option value="Night Out">Night Out</option>
-                                <option value="Special Date">Special Date</option>
-                                <option value="Summer Breeze">Summer Breeze</option>
-                            </select>
-                        </div>
-                        <div class="form-group form-checkbox-wrap" style="justify-content: flex-start; height: 100%; align-items: flex-end; padding-bottom: 10px;">
-                            <label class="filter-checkbox-label">
-                                <input type="checkbox" id="review-check-verified" checked>
-                                <span class="custom-checkbox"></span>
-                                Verified Purchase
-                            </label>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn-primary" style="margin-top: 10px; width: 100%;">Post Review</button>
-                </form>
-            </div>
         </div>
     </div>
 
