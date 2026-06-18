@@ -113,6 +113,11 @@ let appState = {
     quizAnswers: {}
 };
 
+// --- PRICE FORMATTING HELPER ---
+function formatPrice(value) {
+    return 'Rp ' + Number(value).toLocaleString('id-ID');
+}
+
 // --- PRODUCTS DATABASE ---
 const products = {
     "Santal Nectar": {
@@ -121,11 +126,11 @@ const products = {
         tagline: "Earthy, Warm & Grounding",
         description: "A creamy wood symphony combining Mysore sandalwood, deep amber wood, and soft vanilla bean highlights.",
         longDescription: "A warm, grounding masterpiece. Santal Nectar captures the timeless depth of Australian sandalwood, sweetened with a hint of warm vanilla pod, and balanced by rich cedarwood and amber. It feels like a soft velvet blanket, leaving an elegant scent trail that makes a statement without shouting.",
-        price: 120,
+        price: 1800000,
         sizes: {
-            "50ml Eau de Parfum": 120,
-            "100ml Eau de Parfum": 185,
-            "10ml Concentrated Oil": 45
+            "50ml Eau de Parfum": 1800000,
+            "100ml Eau de Parfum": 2750000,
+            "10ml Concentrated Oil": 680000
         },
         notes: {
             top: "Cardamom, Violet Leaves",
@@ -145,11 +150,11 @@ const products = {
         tagline: "Zesty, Fresh & Energizing",
         description: "Zesty sun-drenched bergamot, crisp sea salt, and a green patchouli base.",
         longDescription: "An energetic burst of pure Mediterranean sunshine. Citrus Breeze opens with sparkling bergamot, fresh lemon zest, and clean grapefruit, drifting into a heart of fresh sea spray and jasmine, before drying down to a delicate, earthy vetiver and green patchouli base. The ultimate morning signature scent.",
-        price: 95,
+        price: 1450000,
         sizes: {
-            "50ml Eau de Parfum": 95,
-            "100ml Eau de Parfum": 145,
-            "10ml Concentrated Oil": 35
+            "50ml Eau de Parfum": 1450000,
+            "100ml Eau de Parfum": 2200000,
+            "10ml Concentrated Oil": 550000
         },
         notes: {
             top: "Bergamot, Lemon Zest, Grapefruit",
@@ -169,11 +174,11 @@ const products = {
         tagline: "Sweet, Elegant & Romantic",
         description: "Damask rose petals, fresh peony bloom, and a soft velvet musk base.",
         longDescription: "A romantic walk through a blooming French garden. Rose Couture is a modern tribute to the timeless rose. It blends luscious Damask rose buds with soft peony petals, highlighted by juicy lychee top notes, and settles into a sophisticated base of powdery iris and creamy cashmere musk.",
-        price: 110,
+        price: 1650000,
         sizes: {
-            "50ml Eau de Parfum": 110,
-            "100ml Eau de Parfum": 165,
-            "10ml Concentrated Oil": 40
+            "50ml Eau de Parfum": 1650000,
+            "100ml Eau de Parfum": 2500000,
+            "10ml Concentrated Oil": 600000
         },
         notes: {
             top: "Lychee, Bergamot, Pink Pepper",
@@ -193,11 +198,11 @@ const products = {
         tagline: "Spicy, Rich & Exotic",
         description: "A dark, seductive blend of amber wood, exotic spices, and sweet honeyed tobacco.",
         longDescription: "Seductive, mysterious, and deeply luxurious. Amber Velvet surrounds you with an opulent cloud of sweet honeyed tobacco leaves and warm amber resin, spiced with Madagascar cinnamon, and layered over a heavy, sophisticated base of dark vanilla, labdanum, and Tonka bean. Perfect for cold evenings and grand galas.",
-        price: 135,
+        price: 2050000,
         sizes: {
-            "50ml Eau de Parfum": 135,
-            "100ml Eau de Parfum": 210,
-            "10ml Concentrated Oil": 50
+            "50ml Eau de Parfum": 2050000,
+            "100ml Eau de Parfum": 3150000,
+            "10ml Concentrated Oil": 760000
         },
         notes: {
             top: "Honey, Tobacco Leaves, Coriander",
@@ -217,11 +222,11 @@ const products = {
         tagline: "Crisp, Marine & Aquatic",
         description: "A cooling sea salt breeze with fresh mineral notes, cucumber slice, and driftwood base.",
         longDescription: "An immersive dive into the cold, deep ocean. Ocean Mist opens with a crisp breeze of sea salt and mineral accord, layered with fresh cucumber slice and green algae, before drying down to a calming driftwood and white musk foundation. Perfect for active days and bright summer mornings.",
-        price: 105,
+        price: 1580000,
         sizes: {
-            "50ml Eau de Parfum": 105,
-            "100ml Eau de Parfum": 155,
-            "10ml Concentrated Oil": 38
+            "50ml Eau de Parfum": 1580000,
+            "100ml Eau de Parfum": 2350000,
+            "10ml Concentrated Oil": 580000
         },
         notes: {
             top: "Sea Salt, Cucumber",
@@ -241,11 +246,11 @@ const products = {
         tagline: "Sweet, Opulent & Seductive",
         description: "Rich black vanilla pod, warm toasted tonka bean, and a splash of spiced gold rum.",
         longDescription: "An indulgent, velvet night. Vanilla Royale is an opulent oriental blend opening with sweet spiced gold rum and night-blooming orchids. The heart is filled with toasted tonka bean and heliotrope, melting into a heavy, intoxicating base of Madagascar black vanilla pod, rich benzoin, and amber crystals.",
-        price: 125,
+        price: 1880000,
         sizes: {
-            "50ml Eau de Parfum": 125,
-            "100ml Eau de Parfum": 190,
-            "10ml Concentrated Oil": 48
+            "50ml Eau de Parfum": 1880000,
+            "100ml Eau de Parfum": 2850000,
+            "10ml Concentrated Oil": 720000
         },
         notes: {
             top: "Spiced Rum, Orchid",
@@ -265,11 +270,11 @@ const products = {
         tagline: "Earth, Rain & Vetiver",
         description: "Green vetiver grass, petrichor mineral notes, and damp cedarwood.",
         longDescription: "The essence of a forest floor after heavy rainfall. Vetiver Rain is a clean green masterpiece blending premium Haitian vetiver grass, rain-drenched petrichor accords, and patchouli leaves, finished with a heavy base of damp cedarwood and dark oakmoss.",
-        price: 115,
+        price: 1750000,
         sizes: {
-            "50ml Eau de Parfum": 115,
-            "100ml Eau de Parfum": 175,
-            "10ml Concentrated Oil": 42
+            "50ml Eau de Parfum": 1750000,
+            "100ml Eau de Parfum": 2650000,
+            "10ml Concentrated Oil": 640000
         },
         notes: {
             top: "Petrichor, Bergamot",
@@ -289,11 +294,11 @@ const products = {
         tagline: "White Florals & Velvet Musks",
         description: "Night-blooming Jasmine Sambac, fresh orange blossom, and sheer cashmere musk.",
         longDescription: "A delicate yet hypnotic white floral veil. Jasmine Blossom opens with sparkling neroli and sweet orange blossom buds, leading into an opulent heart of night-blooming Egyptian Jasmine Sambac, settling on a pillow of sheer cashmere musk and light amberwood.",
-        price: 108,
+        price: 1620000,
         sizes: {
-            "50ml Eau de Parfum": 108,
-            "100ml Eau de Parfum": 160,
-            "10ml Concentrated Oil": 38
+            "50ml Eau de Parfum": 1620000,
+            "100ml Eau de Parfum": 2420000,
+            "10ml Concentrated Oil": 580000
         },
         notes: {
             top: "Neroli, Petitgrain",
@@ -313,11 +318,11 @@ const products = {
         tagline: "Rich Oud & Dark Rose",
         description: "Rare Cambodian oud wood, Turkish damask rose, and leather spice.",
         longDescription: "Mysterious, heavy, and majestic. Oud Imperial blends dark Cambodian oud wood with Turkish damask rose petals, spiced with black pepper and cardamom, over a deep base of soft suede, agarwood, and labdanum.",
-        price: 165,
+        price: 2480000,
         sizes: {
-            "50ml Eau de Parfum": 165,
-            "100ml Eau de Parfum": 245,
-            "10ml Concentrated Oil": 60
+            "50ml Eau de Parfum": 2480000,
+            "100ml Eau de Parfum": 3750000,
+            "10ml Concentrated Oil": 920000
         },
         notes: {
             top: "Cardamom, Black Pepper",
@@ -337,11 +342,11 @@ const products = {
         tagline: "Ceremonial Matcha & Bergamot",
         description: "Creamy ceremonial green tea matcha, bright bergamot zest, and soft cedar.",
         longDescription: "A serene, calming olfactory retreat. Matcha Zen opens with bright citrus bergamot and mandarin orange, warming into a rich heart of creamy green matcha tea and powder accord, and settling on a peaceful bed of cedarwood and white musk.",
-        price: 110,
+        price: 1650000,
         sizes: {
-            "50ml Eau de Parfum": 110,
-            "100ml Eau de Parfum": 165,
-            "10ml Concentrated Oil": 40
+            "50ml Eau de Parfum": 1650000,
+            "100ml Eau de Parfum": 2500000,
+            "10ml Concentrated Oil": 600000
         },
         notes: {
             top: "Bergamot, Mandarin",
@@ -361,11 +366,11 @@ const products = {
         tagline: "Warm Spices & Sweet Tobacco",
         description: "Dried tobacco leaves, sweet vanilla bean, cocoa, and warm spices.",
         longDescription: "A warm, comforting, and opulent lounge atmosphere. Spiced Tobacco opens with rich dried tobacco leaves and warm cardamom spice, melting into a heart of sweet vanilla pod, dark cocoa, and tonka bean, over a woody dried fruit base.",
-        price: 130,
+        price: 1950000,
         sizes: {
-            "50ml Eau de Parfum": 130,
-            "100ml Eau de Parfum": 195,
-            "10ml Concentrated Oil": 48
+            "50ml Eau de Parfum": 1950000,
+            "100ml Eau de Parfum": 2950000,
+            "10ml Concentrated Oil": 720000
         },
         notes: {
             top: "Tobacco Leaves, Spices",
@@ -385,11 +390,11 @@ const products = {
         tagline: "Creamy Coconut & White Frangipani",
         description: "Golden tiare blossom, creamy coconut milk, and solar beach sands.",
         longDescription: "An endless golden summer in a bottle. Coconut Blossom opens with sweet tiare flower and frangipani petals, layered with rich coconut milk and warm vanilla orchid, resting on a base of solar sands and sheer musk.",
-        price: 98,
+        price: 1480000,
         sizes: {
-            "50ml Eau de Parfum": 98,
-            "100ml Eau de Parfum": 145,
-            "10ml Concentrated Oil": 35
+            "50ml Eau de Parfum": 1480000,
+            "100ml Eau de Parfum": 2200000,
+            "10ml Concentrated Oil": 530000
         },
         notes: {
             top: "Tiare Flower, Frangipani",
@@ -624,7 +629,7 @@ function renderHome() {
                                             </div>
                                         </div>
                                         <div class="product-footer">
-                                            <span class="product-price">$${product.price}</span>
+                                            <span class="product-price">${formatPrice(product.price)}</span>
                                             <a href="https://wa.link/x68he8" target="_blank" class="btn-card-action" aria-label="Order on WhatsApp" style="display: flex; justify-content: center; align-items: center;">
                                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
                                                     <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
@@ -651,7 +656,7 @@ function renderHome() {
                     </svg>
                     <div>
                         <h4 class="trust-title">Fast Shipping</h4>
-                        <p class="trust-desc">Complimentary shipping on orders over $150.</p>
+                        <p class="trust-desc">Complimentary shipping on orders over Rp 2.000.000.</p>
                     </div>
                 </div>
                 <div class="trust-item">
@@ -807,7 +812,7 @@ function renderProduct() {
                         <a href="#" class="rating-value" style="text-decoration: underline;" id="btn-jump-reviews">Read Scent Voices</a>
                     </div>
 
-                    <div class="product-detail-price" id="detail-price-display">$${product.sizes[appState.selectedSize]}</div>
+                    <div class="product-detail-price" id="detail-price-display">${formatPrice(product.sizes[appState.selectedSize])}</div>
                     <p class="product-detail-description">${product.longDescription}</p>
 
                     <!-- Sizes Option Selector -->
@@ -1002,7 +1007,7 @@ function renderProduct() {
             btn.classList.add('active');
             const size = btn.getAttribute('data-size');
             appState.selectedSize = size;
-            priceDisplay.textContent = `$${product.sizes[size]}`;
+            priceDisplay.textContent = formatPrice(product.sizes[size]);
         });
     });
 
@@ -1609,7 +1614,7 @@ function renderCartList() {
                 <p style="font-size: 13px;">Explore our families and pick your perfect matches.</p>
             </div>
         `;
-        cartSubtotal.textContent = "$0.00";
+        cartSubtotal.textContent = "Rp 0";
         return;
     }
 
@@ -1632,7 +1637,7 @@ function renderCartList() {
                 </div>
                 
                 <div class="cart-item-price-qty">
-                    <span class="cart-item-price">$${item.price}</span>
+                    <span class="cart-item-price">${formatPrice(item.price)}</span>
                     <div class="qty-counter">
                         <button class="btn-qty" onclick="updateCartQty('${item.id}', -1)" aria-label="Decrease quantity">-</button>
                         <span class="qty-val">${item.quantity}</span>
@@ -1648,7 +1653,7 @@ function renderCartList() {
         `;
     }).join('');
 
-    cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+    cartSubtotal.textContent = formatPrice(subtotal);
 }
 
 // Global scope bindings for inline onclick attributes
