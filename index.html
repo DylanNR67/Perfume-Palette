@@ -61,7 +61,7 @@
     <!-- --- MAIN ONE PAGE CONTENT --- -->
     <main>
         
-        <!-- 1. UNIFIED SUPER-HERO SECTION -->
+        <!-- 1. HERO SECTION -->
         <section id="hero" class="hero-section">
             <div class="container hero-grid">
                 <!-- Column A: Value Proposition -->
@@ -79,15 +79,36 @@
                         <a href="#about-us" class="btn-secondary">Authenticity Guarantee</a>
                     </div>
                 </div>
-                <!-- Column B: Immediate Shopping Access (Top 6 Trending Carousel/Grid) -->
-                <div class="hero-access-sidebar">
-                    <div class="sidebar-header">
+                <!-- Column B: Lifestyle Hero Image -->
+                <div class="hero-image-column">
+                    <div class="hero-image-frame">
+                        <img src="assets/hero-lifestyle.png" alt="Stylish people holding luxury perfume brands" class="hero-lifestyle-img">
+                        <div class="hero-image-overlay-badge">
+                            <span>✨ 1,400+ Happy Collectors</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1b. BESTSELLERS LANDSCAPE STRIP -->
+        <section class="bestsellers-strip">
+            <div class="container">
+                <div class="bestsellers-strip-header">
+                    <div class="strip-title-wrap">
                         <span class="gold-badge">Trending Now</span>
-                        <h3>Bestsellers Shop</h3>
+                        <h3 class="strip-title">Bestsellers Shop</h3>
                     </div>
-                    <div class="bestsellers-compact-grid" id="hero-bestsellers-grid">
-                        <!-- Dynamically populated from app.js (top 6 trending items) -->
+                    <div class="strip-scroll-hint">
+                        <span>Scroll</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
                     </div>
+                </div>
+                <div class="bestsellers-landscape-track" id="hero-bestsellers-grid">
+                    <!-- Dynamically populated from app.js (top 6 trending items) -->
                 </div>
             </div>
         </section>

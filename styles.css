@@ -334,41 +334,128 @@ button {
     transform: translateY(-2px);
 }
 
-/* Hero Access Sidebar: Trending Top 6 Grid */
-.hero-access-sidebar {
-    background-color: var(--bg-cream);
-    border: 1.5px solid var(--border-gold);
-    border-radius: var(--border-radius-card);
-    padding: 30px;
-    box-shadow: var(--shadow-medium);
+/* Hero Lifestyle Image Column */
+.hero-image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
 }
 
-.sidebar-header {
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(197, 168, 128, 0.2);
-    padding-bottom: 12px;
+.hero-image-frame {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-heavy);
+    border: 2px solid var(--border-gold);
 }
 
-.sidebar-header h3 {
-    font-size: 22px;
-    margin-top: 4px;
+.hero-lifestyle-img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-image-frame:hover .hero-lifestyle-img {
+    transform: scale(1.03);
+}
+
+.hero-image-overlay-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(26, 26, 26, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: var(--bg-alabaster);
+    padding: 10px 20px;
+    border-radius: var(--border-radius-pill);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border: 1px solid rgba(197, 168, 128, 0.3);
+}
+
+/* --- BESTSELLERS LANDSCAPE STRIP --- */
+.bestsellers-strip {
+    padding: 50px 0 60px;
+    background: linear-gradient(180deg, var(--bg-alabaster) 0%, var(--bg-cream) 100%);
+    border-top: 1px solid rgba(197, 168, 128, 0.12);
+}
+
+.bestsellers-strip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 28px;
+}
+
+.strip-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.strip-title {
+    font-size: 26px;
     color: var(--text-charcoal);
+    margin-top: 4px;
 }
 
-.bestsellers-compact-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+.strip-scroll-hint {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    animation: pulseRight 2s ease-in-out infinite;
+}
+
+@keyframes pulseRight {
+    0%, 100% { transform: translateX(0); opacity: 0.7; }
+    50% { transform: translateX(4px); opacity: 1; }
+}
+
+.bestsellers-landscape-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 16px;
+    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-gold) transparent;
+}
+
+.bestsellers-landscape-track::-webkit-scrollbar {
+    height: 5px;
+}
+.bestsellers-landscape-track::-webkit-scrollbar-track {
+    background: transparent;
+}
+.bestsellers-landscape-track::-webkit-scrollbar-thumb {
+    background-color: var(--border-gold);
+    border-radius: 3px;
 }
 
 .compact-card {
+    min-width: 280px;
+    max-width: 300px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
     background-color: var(--bg-alabaster);
-    border-radius: 12px;
+    border-radius: 16px;
     border: 1px solid rgba(197, 168, 128, 0.15);
-    padding: 16px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -377,26 +464,31 @@ button {
 
 .compact-card:hover {
     border-color: var(--accent-gold);
-    box-shadow: var(--shadow-soft);
-    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    transform: translateY(-4px);
 }
 
 .compact-img-wrap {
-    height: 90px;
+    height: 140px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bg-cream);
-    border-radius: 8px;
-    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-cream-dark) 100%);
+    border-radius: 12px;
+    margin-bottom: 14px;
     position: relative;
-    padding: 6px;
+    padding: 10px;
 }
 
 .compact-img-wrap img {
     max-width: 90%;
     max-height: 90%;
     object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.compact-card:hover .compact-img-wrap img {
+    transform: scale(1.08);
 }
 
 .compact-brand {
@@ -408,10 +500,10 @@ button {
 }
 
 .compact-name {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     color: var(--text-charcoal);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -421,17 +513,19 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid rgba(197, 168, 128, 0.12);
+    padding-top: 12px;
 }
 
 .compact-price {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
     color: var(--text-charcoal);
 }
 
 .btn-compact-add {
-    font-size: 9px;
-    padding: 6px 12px;
+    font-size: 10px;
+    padding: 8px 16px;
     background-color: var(--text-charcoal);
     color: var(--bg-alabaster);
     border-radius: var(--border-radius-pill);
@@ -1239,6 +1333,12 @@ button {
     .hero-actions {
         justify-content: center;
     }
+    .hero-image-frame {
+        max-width: 400px;
+    }
+    .hero-lifestyle-img {
+        height: 400px;
+    }
     .top-picks-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1264,8 +1364,11 @@ button {
     .top-picks-grid {
         grid-template-columns: 1fr;
     }
-    .bestsellers-compact-grid {
-        grid-template-columns: 1fr;
+    .compact-card {
+        min-width: 240px;
+    }
+    .hero-lifestyle-img {
+        height: 320px;
     }
     .brands-logo-grid {
         grid-template-columns: repeat(2, 1fr);
